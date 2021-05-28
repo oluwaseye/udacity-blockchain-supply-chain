@@ -23,7 +23,7 @@
  */
 
 const HDWalletProvider = require('truffle-hdwallet-provider');
-const infuraKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+const infuraKey = "d7c39bd2a0a8461898a51b4a17b4a287";
 
 const fs = require('fs');
 const mnemonic = fs.readFileSync(".secret").toString().trim(); // gitignore
@@ -53,14 +53,13 @@ module.exports = {
     },
 
     //TODO: Implement Task 3 Deploy your Contract to Rinkeby
-    // rinkeby: {
-    //   provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),
-    //     network_id: 4,       // rinkeby's id
-    //     gas: 6700000,        // rinkeby has a lower block limit than mainnet
-    //     confirmations: 2,
-    //     timeoutBlocks: 200,
-    //     skipDryRun: true,
-    // },
+    rinkeby: {
+      provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),
+        network_id: 4,       // rinkeby's id
+        gas: 4712388,        // rinkeby has a lower block limit than mainnet
+        gasPrice: 6700000,
+        from: "0xe03Fef6AeeAAB8721DcC246083F6A74783a59AEC" // default address to use for any transaction Truffle makes during migrations
+    },
 
     // Another network with more advanced options...
     // advanced: {
