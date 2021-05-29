@@ -122,12 +122,12 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferTwo[5], 2, 'Error: Invalid item State');
     })
 
-    // 4. Test sellItem()
-    it("Testing function sellItem() smart contract allows a farmer to sell coffee", async() => {
+    // 4. Test addItem()
+    it("Testing function addItem() smart contract allows a farmer to sell coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
 
-        // Mark an item as ForSale by calling function sellItem()
-        var event = await supplyChain.sellItem(upc, productPrice, {from: originFarmerID});
+        // Mark an item as ForSale by calling function addItem()
+        var event = await supplyChain.addItem(upc, productPrice, {from: originFarmerID});
 
         // Determine if the event has been emitted using `truffleAssert`
         truffleAssert.eventEmitted(event, 'ForSale');

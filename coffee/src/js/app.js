@@ -141,7 +141,7 @@ App = {
                 return await App.packItem(event);
                 break;
             case 4:
-                return await App.sellItem(event);
+                return await App.addItem(event);
                 break;
             case 5:
                 return await App.buyItem(event);
@@ -215,17 +215,17 @@ App = {
         });
     },
 
-    sellItem: function (event) {
+    addItem: function (event) {
         event.preventDefault();
         var processId = parseInt($(event.target).data('id'));
 
         App.contracts.SupplyChain.deployed().then(function(instance) {
             const productPrice = web3.utils.toWei('1', "ether");
             console.log('productPrice',productPrice);
-            return instance.sellItem(App.upc, App.productPrice, {from: App.metamaskAccountID});
+            return instance.addItem(App.upc, App.productPrice, {from: App.metamaskAccountID});
         }).then(function(result) {
             $("#ftc-item").text(result);
-            console.log('sellItem',result);
+            console.log('addItem',result);
         }).catch(function(err) {
             console.log(err.message);
         });
