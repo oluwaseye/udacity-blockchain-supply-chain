@@ -26,7 +26,9 @@ I did not use IPFS.
 # Deployed to Ropsten Network*
 
 **Transaction Hash**: 0xbbb837fa5274e7e6f722bb000a0cf1f2eef63b19ae5490b4cbc6227ebb3ef237
+
 **Contract Address**: 0xe9906Eefe52Fed418C20c8B6b38cBDB60b1a9293
+
 **Etherscan url**: https://ropsten.etherscan.io/tx/0xbbb837fa5274e7e6f722bb000a0cf1f2eef63b19ae5490b4cbc6227ebb3ef237
 
 ![enter image description here](https://raw.githubusercontent.com/oluwaseye/udacity-blockchain-supply-chain/main/images/deployment.png)
